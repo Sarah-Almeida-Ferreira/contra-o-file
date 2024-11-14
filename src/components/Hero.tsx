@@ -1,12 +1,12 @@
 import * as React from "react";
-import HeroImage from "../assets/hero-image.jpg";
+import { StaticImage } from "gatsby-plugin-image";
 import "../styles/components/Hero.css";
 import { WHATSAPP_LINK } from "../consts/contact.consts";
 
 const Hero: React.FC = () => {
     return (
         <section aria-label="Hero Section" className="hero">
-            <img className="hero-image" alt="Hero" src={HeroImage} />
+            <StaticImage className="hero-image" alt="Hero" src="../assets/hero-image.jpg" loading="lazy" />
             <div className="hero-slogan">
                 <div className="hero-slogan-container">
                     Saúde vegana ao seu alcance, com sabor e consciência local.

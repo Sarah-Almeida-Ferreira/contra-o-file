@@ -1,0 +1,37 @@
+.about-content {
+  max-width: 1100px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 1rem;
+
+  ul {
+    padding: 0;
+  }
+
+  .about-image {
+    display: none;
+  }
+}
+
+@media (min-width: 925px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .about-image {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      object-fit: cover;
+      height: fit-content;
+      box-shadow: var(--default-shadow);
+
+      img {
+        width: 100%;
+        aspect-ratio: 16/12;
+      }
+    }
+  }
+}
