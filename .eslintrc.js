@@ -11,6 +11,7 @@ module.exports = {
     "@typescript-eslint",
     "react",
     "jsx-a11y", // Plugin para acessibilidade
+    "jest",
   ],
   extends: [
     "eslint:recommended",
@@ -18,11 +19,15 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/jsx-runtime", // Permite o uso do JSX sem importar React (caso esteja usando o novo JSX transform)
+    "plugin:jest/recommended",
   ],
   rules: {
     quotes: ["error", "double"],
     semi: ["error", "always"],
-    "react/react-in-jsx-scope": "off", // O React não precisa estar em escopo com o novo JSX transform
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { varsIgnorePattern: "^React$" },
+    ],
     "@typescript-eslint/no-explicit-any": "warn", // Aviso para uso de "any" no TypeScript
     "jsx-a11y/anchor-is-valid": "warn", // Aviso para links sem conteúdo acessível
     "jsx-a11y/alt-text": "warn", // Aviso para imagens sem texto alternativo
@@ -37,4 +42,5 @@ module.exports = {
     browser: true, // Para ambiente de navegador
     node: true, // Para ambiente de Node.js
   },
+  ignorePatterns: ["public/"],
 };
