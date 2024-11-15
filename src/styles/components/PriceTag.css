@@ -1,0 +1,20 @@
+.price-tag {
+  list-style: none;
+  border: 1px solid var(--primary-color);
+  height: fit-content;
+
+  .price-tag-label {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: larger;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: var(--on-primary-color);
+    background-color: var(--primary-color);
+  }
+
+  .price-tag-price {
+    text-align: center;
+  }
+}
