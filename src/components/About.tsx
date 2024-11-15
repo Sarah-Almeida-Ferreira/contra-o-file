@@ -8,7 +8,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const About: React.FC = () => {
     return (
         <Section title={ABOUT.title} aria-label="About Section">
-            <div className="about-content">
+            <div className="container about-container">
                 <ul aria-label="about-topics">
                     {ABOUT.items.map((item, index) => (
                         <AboutTopic key={index} title={item.title} text={item.text} icon={item.icon} />

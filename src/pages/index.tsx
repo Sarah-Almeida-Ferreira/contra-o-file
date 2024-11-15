@@ -4,6 +4,7 @@ import "../styles/index.css";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Menu from "../components/Menu";
+import Contact from "../components/Contact";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
       <About />
       <Menu />
+      <Contact />
     </main>
   );
 };

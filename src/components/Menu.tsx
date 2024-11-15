@@ -43,7 +43,7 @@ const Menu: React.FC = () => {
 
     return (
         <Section title="Nosso cardápio" aria-label="Menu Section">
-            <div className="menu-container">
+            <div className="container menu-container">
                 <button className="menu-carousel-button left" type="button" onClick={scrollLeft} data-testid="left-button">
                     <FaChevronLeft />
                 </button>
