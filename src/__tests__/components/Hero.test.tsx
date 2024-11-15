@@ -36,7 +36,8 @@ describe("Hero component", () => {
         expect(heroSection).toHaveClass("hero");
 
         const heroButton = screen.getByRole("link", { name: /Faça seu pedido!/ });
-        expect(heroButton).toHaveClass("primary-button");
+        expect(heroButton).toHaveClass("button");
+        expect(heroButton).toHaveClass("primary");
         expect(heroButton).toHaveClass("hero-slogan-button");
     });
 });

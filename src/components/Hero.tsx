@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             <div className="hero-slogan">
                 <div className="hero-slogan-container">
                     Saúde vegana ao seu alcance, com sabor e consciência local.
-                    <a href={WHATSAPP_LINK} className="primary-button hero-slogan-button">
+                    <a href={WHATSAPP_LINK} className="button primary hero-slogan-button">
                         Faça seu pedido!
                     </a>
                 </div>
