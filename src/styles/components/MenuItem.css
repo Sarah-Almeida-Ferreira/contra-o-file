@@ -1,0 +1,43 @@
+.menu-item {
+  box-shadow: var(--default-shadow);
+  list-style: none;
+  box-sizing: border-box;
+  display: grid;
+  flex: 0 0 30%;
+  scroll-snap-align: center;
+
+  .menu-item-image {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    object-fit: cover;
+
+    img {
+      aspect-ratio: 16/12;
+    }
+  }
+
+  .menu-item-content {
+    padding: 1rem;
+
+    .menu-item-title {
+      color: var(--primary-color);
+    }
+  }
+
+  .menu-item-prices {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: end;
+    column-gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu-item {
+    min-width: 0;
+    max-width: 300px;
+  }
+}
