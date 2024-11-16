@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 0.5rem 2rem;
+  height: 80px;
+
+  .footer-links-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+
+    .link {
+      font-size: x-large;
+      color: var(--primary-color);
+      transition: all 300ms ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

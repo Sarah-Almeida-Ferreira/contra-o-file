@@ -8,10 +8,12 @@ interface SectionProps extends React.HTMLAttributes<HTMLAreaElement> {
 const Section: React.FC<SectionProps> = ({ title, children, ...props }) => {
     return (
         <section {...props} className="section">
-            <div className="section-title-container">
-                <h1 className="section-title">{title}</h1>
+            <div className="section-container">
+                <div className="section-title-container">
+                    <h1 className="section-title">{title}</h1>
+                </div>
+                {children}
             </div>
-            {children}
         </section>
     );
 };
