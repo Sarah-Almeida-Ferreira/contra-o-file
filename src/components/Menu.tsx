@@ -42,12 +42,12 @@ const Menu: React.FC = () => {
     const scrollRight = () => handleScroll("right");
 
     return (
-        <Section title="Nosso cardápio" aria-label="Menu Section">
+        <Section title="Nosso cardápio" aria-label="Menu Section" id="menu">
             <div className="container menu-container">
-                <button className="menu-carousel-button left" type="button" onClick={scrollLeft} data-testid="left-button">
+                <button className="menu-carousel-button left" type="button" onClick={scrollLeft} data-testid="left-button" aria-label="Retornar">
                     <FaChevronLeft />
                 </button>
-                <button className="menu-carousel-button right" type="button" onClick={scrollRight} data-testid="right-button">
+                <button className="menu-carousel-button right" type="button" onClick={scrollRight} data-testid="right-button" aria-label="Avançar">
                     <FaChevronRight />
                 </button>
                 <ul className="menu-items" data-testid="menu-items" ref={carouselRef} onTouchEnd={handleTouchEnd} onTouchStart={handleTouchStart}>

@@ -8,7 +8,7 @@ import { IFOOD_LINK, FORMATTED_PHONE, WHATSAPP_LINK } from "../consts/contact.co
 
 const Contact: React.FC = () => {
     return (
-        <Section title="Nossos contatos" aria-label="Contact Section">
+        <Section title="Nossos contatos" aria-label="Contact Section" id="contact">
             <div className="container contact-container">
                 <div className="container-column">
                     <a href={WHATSAPP_LINK} className="button primary contact-button">

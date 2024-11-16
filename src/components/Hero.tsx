@@ -5,7 +5,7 @@ import { WHATSAPP_LINK } from "../consts/contact.consts";
 
 const Hero: React.FC = () => {
     return (
-        <section aria-label="Hero Section" className="hero">
+        <section aria-label="Hero Section" className="hero" id="hero">
             <StaticImage className="hero-image" alt="Hero" src="../assets/hero-image.jpg" loading="lazy" />
             <div className="hero-slogan">
                 <div className="hero-slogan-container">
