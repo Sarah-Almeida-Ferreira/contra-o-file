@@ -17,20 +17,20 @@
     background-color: var(--background-color);
     color: var(--primary-color);
     box-shadow: var(--default-shadow);
-    font-size: small;
+    font-size: x-small;
     position: absolute;
     top: 40%;
     left: 5%;
-    max-width: 12rem;
-    padding: 1rem;
+    width: 10rem;
+    padding: 0 1rem;
 
     .hero-slogan-container {
       position: relative;
 
       .hero-slogan-button {
         position: absolute;
-        top: 75%;
-        left: 100%;
+        top: 95%;
+        left: 90%;
         white-space: nowrap;
       }
     }
@@ -42,11 +42,10 @@
     max-height: 20rem;
 
     .hero-slogan {
-      width: 20rem;
-      max-width: 20rem;
+      width: 16rem;
       padding: 1rem;
       left: 15%;
-      font-size: xx-large;
+      font-size: medium;
     }
 
     .hero-slogan-button {

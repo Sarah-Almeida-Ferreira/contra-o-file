@@ -3,7 +3,7 @@ import Hero from "../../components/Hero";
 import { WHATSAPP_LINK } from "../../consts/contact.consts";
 import React from "react";
 
-jest.mock("../assets/hero-image.jpg", () => "../assets/hero-image.jpg");
+jest.mock("../images/hero-image.jpg", () => "../images/hero-image.jpg");
 
 describe("Hero component", () => {
     it("renders the hero image", () => {

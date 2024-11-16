@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
     return (
         <header className={["header", isMenuOpen ? "active" : ""].join(" ")} ref={header}>
-            <StaticImage alt="Imagem de comida vegana" src="../assets/logo-contra-file.png" height={80} />
+            <StaticImage alt="Imagem de comida vegana" src="../images/logo-contra-file.png" height={80} />
             <nav>
                 <button type="button" className="nav-button" onClick={toggleMenu} aria-label="Abrir menu de navegação">
                     <GiHamburgerMenu />

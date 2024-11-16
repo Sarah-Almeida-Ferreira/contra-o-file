@@ -15,7 +15,7 @@ const About: React.FC = () => {
                     ))}
                 </ul>
                 <div className="about-image">
-                    <StaticImage alt="Imagem de comida vegana" src="../assets/about-image.jpg" loading="lazy" />
+                    <StaticImage alt="Imagem de comida vegana" src="../images/about-image.jpg" loading="lazy" />
                 </div>
             </div>
         </Section>

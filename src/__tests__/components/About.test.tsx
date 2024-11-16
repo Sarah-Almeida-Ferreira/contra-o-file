@@ -3,7 +3,7 @@ import About from "../../components/About";
 import React from "react";
 import { ABOUT } from "../../consts/about.const";
 
-jest.mock("../assets/about-image.jpg", () => "../assets/about-image.jpg");
+jest.mock("../images/about-image.jpg", () => "../images/about-image.jpg");
 
 describe("About Component", () => {
     it("should render the About section title", () => {
