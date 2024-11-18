@@ -11,7 +11,7 @@ export const MENU = [
       { label: "M", price: 32.0 },
       { label: "G", price: 40.0 },
     ],
-    image: <StaticImage alt="Imagem meramente ilustrativa" src="../assets/quinoa-bowl.jpg" />
+    image: <StaticImage width={280} height={200} alt="Imagem meramente ilustrativa" src="../images/quinoa-bowl.jpg" />
   },
   {
     title: "Risoto de Cogumelos e Espinafre",
@@ -22,7 +22,7 @@ export const MENU = [
       { label: "M", price: 35.0 },
       { label: "G", price: 45.0 },
     ],
-    image: <StaticImage alt="Imagem meramente ilustrativa" src="../assets/risotto.jpg" />
+    image: <StaticImage width={280} height={200} alt="Imagem meramente ilustrativa" src="../images/risotto.jpg" />
   },
   {
     title: "Wrap de Falafel com Homus e Salada",
@@ -33,7 +33,7 @@ export const MENU = [
       { label: "M", price: 26.0 },
       { label: "G", price: 33.0 },
     ],
-    image: <StaticImage alt="Imagem meramente ilustrativa" src="../assets/wrap-with-falafel.jpg" />
+    image: <StaticImage width={280} height={200} alt="Imagem meramente ilustrativa" src="../images/wrap-with-falafel.jpg" />
   },
   {
     title: "Curry de Grão-de-Bico com Arroz Integral",
@@ -44,7 +44,7 @@ export const MENU = [
       { label: "M", price: 34.0 },
       { label: "G", price: 42.0 },
     ],
-    image: <StaticImage alt="Imagem meramente ilustrativa" src="../assets/curry.jpg" />
+    image: <StaticImage width={280} height={200} alt="Imagem meramente ilustrativa" src="../images/curry.jpg" />
   },
   {
     title: "Salada Mediterrânea com Tofu Grelhado",
@@ -55,6 +55,6 @@ export const MENU = [
       { label: "M", price: 29.0 },
       { label: "G", price: 36.0 },
     ],
-    image: <StaticImage alt="Imagem meramente ilustrativa" src="../assets/salad.jpg" />
+    image: <StaticImage width={280} height={200} alt="Imagem meramente ilustrativa" src="../images/salad.jpg" />
   },
 ];

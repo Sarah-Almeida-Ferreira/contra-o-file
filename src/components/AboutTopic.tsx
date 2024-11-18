@@ -12,7 +12,7 @@ const AboutTopic: React.FC<AboutTopicProps> = ({ title, text, icon }) => {
         <li className="about-item">
             <div className="about-item-icon">{icon}</div>
             <span className="about-item-content">
-                <h4 className="about-item-title">{title}</h4>
+                <h2 className="about-item-title">{title}</h2>
                 <p>{text}</p>
             </span>
         </li>

@@ -19,7 +19,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, description, image, prices }
                 {image}
             </div>
             <div className="menu-item-content">
-                <h4 className="menu-item-title">{title}</h4>
+                <h2 className="menu-item-title">{title}</h2>
                 <p>{description}</p>
             </div>
             <ul className="menu-item-prices">

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <Link to="hero" aria-label="Voltar para topo da página">
-                <StaticImage alt="Logo" src="../assets/logo-contra-file.png" height={80} />
+                <StaticImage alt="Logo" src="../images/logo-contra-file.png" height={80} />
             </Link>
             <div className="footer-links-container" data-testid="footer-links-container">
                 <a href={WHATSAPP_LINK} className="link"><FaWhatsapp aria-label="WhatsApp" /></a>

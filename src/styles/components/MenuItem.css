@@ -9,6 +9,9 @@
   .menu-item-image {
     width: 100%;
     height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     overflow: hidden;
     object-fit: cover;
