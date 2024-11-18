@@ -9,6 +9,13 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
+  flags: {
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+    DEV_SSR: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    FAST_REFRESH: true,
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
