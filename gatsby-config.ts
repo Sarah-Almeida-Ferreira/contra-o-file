@@ -10,7 +10,11 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   flags: {
-    PARALLEL_QUERY_RUNNING: true,
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+    DEV_SSR: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    FAST_REFRESH: true,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -19,6 +23,7 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-purgecss",
+    "gatsby-plugin-typescript",
     {
       resolve: "gatsby-source-filesystem",
       options: {
