@@ -1,5 +1,5 @@
-import React, { act, AnchorHTMLAttributes, ReactNode } from "react";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import React, { AnchorHTMLAttributes, ReactNode } from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Header from "../../components/Header";
 
 // Mock para evitar problemas com `gatsby-plugin-image`
