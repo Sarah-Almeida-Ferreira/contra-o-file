@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const scrollOffset = React.useRef(-80);
+    const [scrollOffset, setScrollOffset] = React.useState(-80);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
             const clientWidth = window.innerWidth;
 
             if (clientWidth && clientWidth < 781) {
-                scrollOffset.current = -200;
+                setScrollOffset(-200);
             }
         };
 
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <header className={["header", isMenuOpen ? "active" : ""].join(" ")}>
+        <header className={["header", isMenuOpen ? "active" : ""].join(" ")} aria-label="Header">
             <StaticImage alt="Imagem de comida vegana" src="../images/logo-contra-file.png" height={80} />
             <nav>
                 <button type="button" className="nav-button" onClick={toggleMenu} aria-label="Abrir menu de navegação">
@@ -38,16 +38,16 @@ const Header: React.FC = () => {
                 </button>
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <Link to="hero" smooth={true} duration={500} offset={scrollOffset.current} onClick={toggleMenu}>Home</Link>
+                        <Link to="hero" smooth={true} duration={500} offset={scrollOffset} onClick={toggleMenu}>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="about" smooth={true} duration={500} offset={scrollOffset.current} onClick={toggleMenu}>Sobre</Link>
+                        <Link to="about" smooth={true} duration={500} offset={scrollOffset} onClick={toggleMenu}>Sobre</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="menu" smooth={true} duration={500} offset={scrollOffset.current} onClick={toggleMenu}>Cardápio</Link>
+                        <Link to="menu" smooth={true} duration={500} offset={scrollOffset} onClick={toggleMenu}>Cardápio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="contact" smooth={true} duration={500} offset={scrollOffset.current} onClick={toggleMenu}>Contatos</Link>
+                        <Link to="contact" smooth={true} duration={500} offset={scrollOffset} onClick={toggleMenu}>Contatos</Link>
                     </li>
                 </ul>
             </nav>

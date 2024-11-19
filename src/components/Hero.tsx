@@ -1,7 +1,8 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import "../styles/components/Hero.css";
-import { WHATSAPP_LINK } from "../consts/contact.consts";
+import { FaWhatsapp } from "react-icons/fa6";
+import { getWhatsappLink } from "../utils/contact.util";
 
 const Hero: React.FC = () => {
     return (
@@ -12,7 +13,8 @@ const Hero: React.FC = () => {
                     <h1>
                         Saúde vegana ao seu alcance, com sabor e consciência local.
                     </h1>
-                    <a href={WHATSAPP_LINK} className="button primary hero-slogan-button">
+                    <a href={getWhatsappLink()} className="button primary hero-slogan-button">
+                        <FaWhatsapp aria-label="WhatsApp" />
                         Faça seu pedido!
                     </a>
                 </div>

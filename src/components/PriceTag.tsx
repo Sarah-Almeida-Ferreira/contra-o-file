@@ -4,9 +4,10 @@ import "../styles/components/PriceTag.css";
 type PriceTagProps = {
     label: string;
     price: number;
+    link: string;
 }
 
-const PriceTag: React.FC<PriceTagProps> = ({ label, price }) => {
+const PriceTag: React.FC<PriceTagProps> = ({ label, price, link }) => {
     const formattedPrice = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: "BRL",
@@ -14,8 +15,10 @@ const PriceTag: React.FC<PriceTagProps> = ({ label, price }) => {
 
     return (
         <li className="price-tag" data-testid="price-tag">
-            <div className="price-tag-label">{label}</div>
-            <p className="price-tag-price" data-testid="formatted-price">{formattedPrice}</p>
+            <a href={link}>
+                <div className="price-tag-label">{label}</div>
+                <p className="price-tag-price" data-testid="formatted-price">{formattedPrice}</p>
+            </a>
         </li>
     );
 };

@@ -1,5 +1,5 @@
-import React, { AnchorHTMLAttributes, ReactNode } from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import React, { act, AnchorHTMLAttributes, ReactNode } from "react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Header from "../../components/Header";
 
 // Mock para evitar problemas com `gatsby-plugin-image`
@@ -60,11 +60,20 @@ describe("Header Component", () => {
         expect(header).not.toHaveClass("active");
     });
 
-    test("applies the correct scroll offset for links", () => {
+    test("applies the correct scroll offset for links when window.offsetWidth is greather than 780", () => {
+        Object.defineProperty(window, "innerWidth", { writable: true, value: 781 });
         render(<Header />);
 
         const homeLink = screen.getByText("Home");
         expect(homeLink).toHaveAttribute("offset", "-80");
+    });
+
+    test("applies the correct scroll offset for links when window.offsetWidth is lower than 781", async () => {
+        Object.defineProperty(window, "innerWidth", { writable: true, value: 780 });
+        render(<Header />);
+
+        const homeLink = screen.getByText("Home");
+        expect(homeLink).toHaveAttribute("offset", "-200");
     });
 
     test("closes the menu when a navigation link is clicked", () => {

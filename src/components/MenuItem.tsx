@@ -1,6 +1,7 @@
 import * as React from "react";
 import PriceTag from "./PriceTag";
 import "../styles/components/MenuItem.css";
+import { getWhatsappLink } from "../utils/contact.util";
 
 type MenuItemProps = {
     title: string;
@@ -24,7 +25,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ title, description, image, prices }
             </div>
             <ul className="menu-item-prices">
                 {prices.map((item, index) => (
-                    <PriceTag key={index} label={item.label} price={item.price} />
+                    <PriceTag key={index} label={item.label} price={item.price} link={getWhatsappLink({ title, size: item.label })} />
                 ))}
             </ul>
         </li>

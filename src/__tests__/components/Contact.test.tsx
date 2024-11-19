@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Contact from "../../components/Contact";
-import { IFOOD_LINK, FORMATTED_PHONE, WHATSAPP_LINK } from "../../consts/contact.consts";
+import { IFOOD_LINK, FORMATTED_PHONE, getWhatsappLink } from "../../utils/contact.util";
 
 // Mock dos ícones para evitar erros nos testes
 jest.mock("react-icons/fa", () => ({
@@ -25,7 +25,7 @@ describe("Contact Component", () => {
         render(<Contact />);
         const whatsappLink = screen.getByRole("link", { name: /clique aqui e faça seu pedido/i });
         expect(whatsappLink).toBeInTheDocument();
-        expect(whatsappLink).toHaveAttribute("href", WHATSAPP_LINK);
+        expect(whatsappLink).toHaveAttribute("href", getWhatsappLink());
         expect(screen.getByText(FORMATTED_PHONE)).toBeInTheDocument();
     });
 
