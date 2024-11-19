@@ -2,6 +2,11 @@
   list-style: none;
   border: 1px solid var(--primary-color);
   height: fit-content;
+  transition: all 300ms ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   .price-tag-label {
     width: 100%;
@@ -16,5 +21,6 @@
 
   .price-tag-price {
     text-align: center;
+    color: var(--text-color);
   }
 }

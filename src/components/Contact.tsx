@@ -4,14 +4,14 @@ import "../styles/components/Contact.css";
 import { FaWhatsapp, FaClock } from "react-icons/fa";
 import { SiIfood } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
-import { IFOOD_LINK, FORMATTED_PHONE, WHATSAPP_LINK } from "../consts/contact.consts";
+import { IFOOD_LINK, FORMATTED_PHONE, getWhatsappLink } from "../utils/contact.util";
 
 const Contact: React.FC = () => {
     return (
         <Section title="Nossos contatos" aria-label="Contact Section" id="contact">
             <div className="container contact-container">
                 <div className="container-column">
-                    <a href={WHATSAPP_LINK} className="button primary contact-button">
+                    <a href={getWhatsappLink()} className="button primary contact-button">
                         <div className="icon-container">
                             <FaWhatsapp className="icon" />
                             {FORMATTED_PHONE} <br />

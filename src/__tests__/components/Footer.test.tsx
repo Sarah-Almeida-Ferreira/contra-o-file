@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Footer from "../../components/Footer";
-import { WHATSAPP_LINK, IFOOD_LINK } from "../../consts/contact.consts";
+import { getWhatsappLink, IFOOD_LINK } from "../../utils/contact.util";
 
 // Mock para evitar problemas com `gatsby-plugin-image`
 jest.mock("gatsby-plugin-image", () => ({
@@ -29,7 +29,7 @@ describe("Footer Component", () => {
 
         const whatsappLink = screen.getByLabelText("WhatsApp");
         expect(whatsappLink).toBeInTheDocument();
-        expect(whatsappLink.closest("a")).toHaveAttribute("href", WHATSAPP_LINK);
+        expect(whatsappLink.closest("a")).toHaveAttribute("href", getWhatsappLink());
     });
 
     test("renders iFood icon with correct link", () => {

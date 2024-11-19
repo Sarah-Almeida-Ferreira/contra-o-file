@@ -32,6 +32,9 @@
         top: 95%;
         left: 90%;
         white-space: nowrap;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 1rem;
       }
     }
   }

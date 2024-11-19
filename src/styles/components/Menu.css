@@ -33,6 +33,10 @@
     width: 40px;
     top: 50%;
 
+    &:hover {
+      background-color: var(--primary-color-dark);
+    }
+
     &.left {
       left: 0;
     }

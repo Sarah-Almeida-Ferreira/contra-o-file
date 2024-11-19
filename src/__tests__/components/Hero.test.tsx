@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Hero from "../../components/Hero";
-import { WHATSAPP_LINK } from "../../consts/contact.consts";
+import { getWhatsappLink } from "../../utils/contact.util";
 import React from "react";
 
 jest.mock("../images/hero-image.jpg", () => "../images/hero-image.jpg");
@@ -26,7 +26,7 @@ describe("Hero component", () => {
 
         const whatsappLink = screen.getByRole("link", { name: /Faça seu pedido!/ });
         expect(whatsappLink).toBeInTheDocument();
-        expect(whatsappLink).toHaveAttribute("href", WHATSAPP_LINK);
+        expect(whatsappLink).toHaveAttribute("href", getWhatsappLink());
     });
 
     it("has the correct class names", () => {
