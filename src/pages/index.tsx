@@ -24,4 +24,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Contra o Filé</title>;
+export const Head: HeadFC = () => <title key="home-title">Contra o Filé</title>;

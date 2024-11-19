@@ -36,6 +36,7 @@ const config: GatsbyConfig = {
       __key: "pages",
     },
   ],
+  pathPrefix: "/contra-o-file",
 };
 
 export default config;
