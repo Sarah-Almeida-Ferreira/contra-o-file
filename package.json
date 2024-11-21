@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "lint": "npx eslint .",
-    "deploy": "npm run lint && npm run test && npm run build && gh-pages -d public"
+    "deploy": "npm run lint && npm run test && gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
